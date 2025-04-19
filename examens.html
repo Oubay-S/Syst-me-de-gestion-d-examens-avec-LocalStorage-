@@ -29,7 +29,7 @@
           <ul>${exam.questions.map(q => 
             `<li><strong>${q.enonce}</strong> — ${q.points} pts — ${q.duree}s<br>
               <ul>${q.propositions.map(p => 
-                `<li>${p.texte} ${p.correcte ? "(✔️ correcte)" : ""}</li>`
+                <li>${p.texte} ${p.correcte ? "(✔️ correcte)" : ""}</li>
               ).join('')}</ul>
             </li>`
           ).join('')}</ul>`;
@@ -38,4 +38,4 @@
     });
   </script>
 </body>
-</html>
+</html
