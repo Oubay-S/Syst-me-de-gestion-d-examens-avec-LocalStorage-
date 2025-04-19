@@ -1,4 +1,11 @@
-// Ajouter dynamiquement des propositions
+
+if (!localStorage.getItem('examens_AMR')) {
+  localStorage.setItem('examens_AMR', JSON.stringify([
+    { nom: 'FR', questions: [] }
+  ]));
+}
+
+// TODO : Ajouter un écouteur d'événement pour ajouter des propositions dynamiquement
 document.getElementById('add-proposition').addEventListener('click', () => {
   const container = document.createElement('div');
   const input = document.createElement('input');
@@ -12,7 +19,7 @@ document.getElementById('add-proposition').addEventListener('click', () => {
   document.getElementById('propositions').appendChild(container);
 });
 
-// Enregistrer la question
+// TODO : Ajouter un écouteur d'événement pour enregistrer la question
 document.getElementById('form-question').addEventListener('submit', function(e) {
   e.preventDefault();
 
